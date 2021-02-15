@@ -1,13 +1,14 @@
-/* body {
-    background-color: blueviolet;
-} */
 
+#gold-count-container {
+    margin: 2% 3%;
+}
 
 #places-container {
     display: flex;
     justify-content: space-around;
+    margin: 4%;
 }
 
-/* #activity-container p {
-    overflow-y: scroll;
-} */
+#activity-container {
+    margin: 2% 3%;
+}
