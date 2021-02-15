@@ -1,6 +1,15 @@
+* {
+    outline: 1px dashed red;
+}
 
 #gold-count-container {
     margin: 2% 3%;
+    outline: 1px dashed blue;
+}
+
+#reset-form {
+    display: flex;
+    justify-content: center;
 }
 
 #places-container {
