@@ -57,11 +57,18 @@ def process_casino(request):
     # CASINO Earn/Lose 0 - 50 gold
     random_gold=random.randint(-50, 50)
     print(random_gold)
-    # No need to check for negatives because( 10 + -5 = 5)
-    request.session['gold_count'] += random_gold
-    print(request.session['gold_count'])
-    request.session['activity'].append(f"{random_gold} gold added to count")
-    request.session.save()
+
+    # Check if the ramdon num is negative
+    if random_gold < 0:
+        request.session['gold_count'] += random_gold
+        print(request.session['gold_count'])
+        request.session['activity'].append(f"You lost: {random_gold} gold in the casino")
+        request.session.save()
+    else:
+        request.session['gold_count'] += random_gold
+        print(request.session['gold_count'])
+        request.session['activity'].append(f"You won: {random_gold} gold in the casino!")
+        request.session.save()
 
     return redirect('/')
 
