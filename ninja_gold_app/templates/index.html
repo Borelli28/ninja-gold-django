@@ -13,7 +13,51 @@
 
 <body>
 
-    <h1>Hello World</h1>
+    <div id="gold-count-container">
+        <h4>Your Gold:</h4>
+        <p>0</p>
+    </div>
+
+    <div id="places-container">
+        <div id="farm">
+            <h3>Farm</h3>
+            <p>(Earn gold)</p>
+            <form action="/process_money" method="POST">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="cave">
+            <h3>Cave</h3>
+            <p>(Earn gold)</p>
+            <form action="/process_money" method="POST">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="house">
+            <h3>House</h3>
+            <p>(Earn gold)</p>
+            <form action="/process_money" method="POST">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="casino">
+            <h3>Casino</h3>
+            <p>(Earn gold)</p>
+            <form action="/process_money" method="POST">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="activity-container">
+        <h4>Activities:</h4>
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
+            tabindex="0">
+            <p>
+                Activity Logs
+            </p>
+        </div>
+    </div>
 
 </body>
 

@@ -1,3 +1,13 @@
-body {
+/* body {
     background-color: blueviolet;
+} */
+
+
+#places-container {
+    display: flex;
+    justify-content: space-around;
 }
+
+/* #activity-container p {
+    overflow-y: scroll;
+} */
