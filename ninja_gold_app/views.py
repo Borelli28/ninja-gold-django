@@ -20,15 +20,15 @@ def index(request):
     return render(request, 'index.html')
 
 
-# def process_farm(request):
+def process_farm(request):
+    # FARM earn 10 - 20 gold
+    random_gold=random.randint(10, 20)
+    request.session['gold_count'] += random_gold
+    print(request.session['gold_count'])
+    request.session['activity'].append(f"{random_gold} gold added to count")
+    request.session.save()
 
-#     # FARM earn 10 - 20 gold
-#     random_gold = random.randint(10, 20)
-#     request.session['gold_count'] += random_gold
-#     print(request.session['gold_count']
-#     # logs.append(f"{random_gold} gold added to count")
-
-#     return redirect('/')
+    return redirect('/')
 
 def process_cave(request):
 
@@ -47,6 +47,8 @@ def process_house(request):
     random_gold=random.randint(2, 5)
     request.session['gold_count'] += random_gold
     print(request.session['gold_count'])
+    request.session['activity'].append(f"{random_gold} gold added to count")
+    request.session.save()
 
     return redirect('/')
 
@@ -58,6 +60,8 @@ def process_casino(request):
     # No need to check for negatives because( 10 + -5 = 5)
     request.session['gold_count'] += random_gold
     print(request.session['gold_count'])
+    request.session['activity'].append(f"{random_gold} gold added to count")
+    request.session.save()
 
     return redirect('/')
 
