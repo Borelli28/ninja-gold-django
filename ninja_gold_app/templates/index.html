@@ -62,9 +62,11 @@
         <h4>Activities:</h4>
         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
             tabindex="0">
+            {% for i in request.session.activity %}
             <p>
-                Activity Logs
+                {{ i }}
             </p>
+            {% endfor %}
         </div>
     </div>
 

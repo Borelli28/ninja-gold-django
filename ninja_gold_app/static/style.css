@@ -1,5 +1,5 @@
 * {
-    outline: 1px dashed red;
+    /* outline: 1px dashed red; */
 }
 
 #gold-count-container {
@@ -20,4 +20,8 @@
 
 #activity-container {
     margin: 2% 3%;
+}
+
+#activity-container p {
+    width: 30%;
 }
