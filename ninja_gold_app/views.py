@@ -10,6 +10,11 @@ def index(request):
     else:
         request.session['gold_count'] = 0
 
+    if 'activity' in request.session:
+        print("logs!")
+    else:
+        request.session['activity'] = "ACTIVITY LOG"
+
     return render(request, 'index.html')
 
 
@@ -43,7 +48,9 @@ def process_house(request):
 def process_casino(request):
 
     # CASINO Earn/Lose 0 - 50 gold
-    random_gold = random.randint(2, 5)
+    random_gold = random.randint(-50, 50)
+    print(random_gold)
+    # No need to check for negatives because( 10 + -5 = 5)
     request.session['gold_count'] += random_gold
     print(request.session['gold_count'])
 
