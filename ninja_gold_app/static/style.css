@@ -20,6 +20,11 @@
 
 #activity-container {
     margin: 2% 3%;
+    outline: 1px dashed red;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
 }
 
 #activity-container p {

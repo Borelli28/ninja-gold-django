@@ -59,9 +59,8 @@
     </div>
 
     <div id="activity-container">
-        <h4>Activities:</h4>
-        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
-            tabindex="0">
+        <h4>Activity Logs:</h4>
+        <div>
             {% for i in request.session.activity %}
             <p>
                 {{ i }}
